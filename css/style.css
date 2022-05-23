@@ -1,0 +1,254 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+/* Core styles */
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none !important;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #1d0e15;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ff5421;
+}
+
+body {
+  background: #1d0e15;
+}
+
+section {
+  padding: 3rem 1rem;
+}
+
+.link-btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  background: #ff5421;
+  color: #fff;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.link-btn:hover {
+  background: #fff;
+  color: #ff5421;
+}
+
+/* Header section styles */
+.header {
+  padding: 3rem 1rem;
+  z-index: 1000;
+}
+
+.header.active {
+  background: #fff;
+  padding: 2rem 0;
+}
+
+.header.active .logo {
+  color: #000;
+}
+
+.header.active .navbar a {
+  color: #000;
+}
+
+.header.active #menu-btn {
+  color: #000;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.header .logo span {
+  color: #ff5421;
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: #fff;
+}
+
+.header .navbar a:hover {
+  color: #ff5421;
+}
+
+.header #menu-btn {
+  display: none;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Home section styles */
+.home {
+  margin-top: 1.5rem;
+  background: url(../images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home span {
+  font-size: 2.5rem;
+  color: #ff5421;
+}
+
+.home h3 {
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: #fff;
+  padding-top: 1rem;
+}
+
+/* About section styles */
+.about span {
+  font-size: 2.5rem;
+  color: #ff5421;
+}
+
+.about h3 {
+  font-size: 2.7rem;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.about p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #ccc;
+}
+
+.about ul li {
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.about ul li i {
+  padding-right: 1rem;
+  color: #ff5421;
+}
+
+/* Counter section styles */
+.counter {
+  background: url(../images/counter-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.counter .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.counter .box-container .box {
+  text-align: center;
+}
+
+.counter .box-container .box h3 {
+  font-size: 5rem;
+  color: #ff5421;
+}
+
+.counter .box-container .box p {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .home h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem;
+  }
+  .header.active {
+    padding: 2rem;
+  }
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header #menu-btn.fa-times {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .navbar a {
+    color: #000;
+    margin: 1rem 2rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  html .header {
+    padding: 3rem;
+  }
+  html .header.active {
+    padding: 3rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

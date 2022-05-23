@@ -1,0 +1,291 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+/* Core styles */
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    list-style: none;
+    text-decoration: none !important;
+    transition: all .2s linear;
+}
+
+$orange: #ff5421;
+$white: #fff;
+$black: #000;
+$light-color: #ccc;
+$bg-color: #1d0e15;
+$border: .1rem solid rgba(255, 255, 255, .2);
+
+@mixin grid($value) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    gap: 2rem;
+}
+
+@mixin title-Text($titleText) {
+    font-size: $titleText;
+    text-transform: capitalize;
+    color: $white;
+}
+
+@mixin graph-Text($graphText) {
+    font-size: $graphText;
+    line-height: 2;
+    color: $light-color;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $bg-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $orange;
+    }
+}
+
+body {
+    background: $bg-color;
+}
+
+section {
+    padding: 3rem 1rem;
+}
+
+.link-btn {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    background: $orange;
+    color: $white;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:hover {
+        background: $white;
+        color: $orange;
+    }
+}
+
+/* Header section styles */
+.header {
+    padding: 3rem 1rem; 
+    z-index: 1000; 
+
+    &.active {
+        background: $white;
+        padding: 2rem 0;
+
+        .logo {
+            color: $black;
+        }
+
+        .navbar a {
+            color: $black;
+        }
+
+        #menu-btn {
+            color: $black;
+        }
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        color: $white;
+        font-weight: bolder;
+
+        span {
+            color: $orange;
+        }
+    }
+
+    .navbar a {
+        font-size: 2rem;
+        margin-left: 2rem;
+        color: $white;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    #menu-btn {
+        display: none;
+        font-size: 2.5rem;
+        color: $white;
+        cursor: pointer;
+    }
+}
+
+/* Home section styles */
+.home {
+    margin-top: 1.5rem;
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    span {
+        font-size: 2.5rem;
+        color: $orange;
+    }
+
+    h3 {
+        @include title-Text(5rem);
+        padding-top: 1rem;
+    }
+}
+
+/* About section styles */
+.about {
+
+    span {
+        font-size: 2.5rem;
+        color: $orange;
+    }
+
+    h3 {
+        @include title-Text(2.7rem);
+        padding: 1rem 0;
+    }
+
+    p {
+        @include graph-Text(1.5rem);
+    }
+
+    ul {
+
+        li {
+            padding-top: 1.5rem;
+            @include title-Text(1.7rem);
+
+            i {
+                padding-right: 1rem;
+                color: $orange;
+            }
+        }
+
+    }
+}
+
+/* Counter section styles */
+.counter {
+    background: url(../images/counter-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .box-container {
+        @include grid(25rem);
+
+        .box {
+            text-align: center;
+
+            h3 {
+                font-size: 5rem;
+                color: $orange;
+            }
+
+            p {
+                @include title-Text(2rem);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+@media (max-width: 991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .home h3{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 2rem;
+
+        &.active {
+            padding: 2rem;
+        }
+
+        #menu-btn {
+            display: inline-block;
+
+            &.fa-times {
+                transform: rotate(180deg);
+            }
+        }
+
+        .navbar {
+            position: absolute;
+            top: 99%; left: 0; right: 0;
+            background: $white;
+            padding: 1rem 0;
+            flex-flow: column; 
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
+
+            a {
+                color: $black;
+                margin: 1rem 2rem;
+                font-size: 2.5rem;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+
+        .header {
+            padding: 3rem;
+
+            &.active {
+                padding: 3rem;
+            }
+        }
+    }
+}
