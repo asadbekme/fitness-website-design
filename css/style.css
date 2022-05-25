@@ -273,6 +273,75 @@ section {
   padding: .5rem 0;
 }
 
+/* Pricing section styles */
+.pricing .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.pricing .box-container .box {
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 2rem;
+}
+
+.pricing .box-container .box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.pricing .box-container .box h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.pricing .box-container .box .price {
+  font-size: 7rem;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.pricing .box-container .box .price span {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.pricing .box-container .box .list p {
+  padding-top: 1.5rem;
+  font-size: 1.7rem;
+  color: #ccc;
+}
+
+.pricing .box-container .box .list p i {
+  padding-right: 1rem;
+  color: #ff5421;
+}
+
+/* Join us section styles */
+.join-us .row h3 {
+  font-size: 2.5rem;
+  color: #ff5421;
+}
+
+.join-us .row h2 {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.join-us .row p {
+  font-size: 1.7rem;
+  line-height: 2;
+  color: #ccc;
+}
+
 /* Media queries */
 @media (max-width: 991px) {
   html {

@@ -275,6 +275,72 @@ section {
     }
 }
 
+/* Pricing section styles */
+.pricing {
+
+    .box-container {
+        @include grid(30rem);
+
+        .box {
+            border: $border;
+            text-align: center;
+            padding: 2rem;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            h3 {
+                @include title-Text(2.5rem);
+            }
+
+            .price {
+                @include title-Text(7rem);
+                font-weight: bolder;
+
+                span {
+                    @include title-Text(2.5rem);
+                }
+            }
+
+            .list {
+                p {
+                    padding-top: 1.5rem;
+                    font-size: 1.7rem;
+                    color: $light-color;
+
+                    i {
+                        padding-right: 1rem;
+                        color: $orange;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+/* Join us section styles */
+.join-us {
+
+    .row {
+        h3 {
+            font-size: 2.5rem;
+            color: $orange;
+        }
+
+        h2 {
+            @include title-Text(3.2rem);
+            padding: 1rem 0;
+        }
+
+        p {
+            @include graph-Text(1.7rem);
+        }
+    }
+}
+
 
 
 
@@ -356,4 +422,5 @@ section {
             }
         }
     }
+
 }
