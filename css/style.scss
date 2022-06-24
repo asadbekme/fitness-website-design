@@ -293,10 +293,6 @@ section {
                 transform: scale(1.2);
             }
 
-            // &:hover {
-            //     transform: scale(1.05);
-            // }
-
             h3 {
                 @include title-text(2.5rem);
             }
@@ -384,7 +380,8 @@ section {
 
                 .content {
                     position: absolute;
-                    bottom: 0; left: 0;
+                    bottom: 0; 
+                    left: 0;
                     background-color: $white;
                     padding: 1rem 2rem;
 
@@ -421,7 +418,142 @@ section {
     }
 }
 
+/* Blogs section styles */
+.blogs {
 
+    .container {
+
+        .box-container {
+            @include grid(30rem); 
+
+            .box {
+                border: $border;
+
+                &:hover .image img {
+                    transform: scale(1.1);
+                }
+
+                .image {
+                    height: 25rem;
+                    overflow: hidden;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .content {
+                    padding: 2rem;
+
+                    .link {
+                        @include title-text(2.7rem);
+
+                        &:hover {
+                            color: $orange;
+                        }
+                    }
+
+                    .icons {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-top: $border;
+                        padding-top: 2rem;
+                        margin-top: 2rem;
+
+
+                        span {
+                            @include title-text(1.5rem);
+
+                            i {
+                                color: $orange;
+                                padding-right: .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* footer section styles */
+.footer {
+    padding: 3rem 1rem;
+    background: url("../images/footer-bg.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .container {
+
+        .box-container {
+            @include grid(25rem); 
+
+            .box {
+                
+                h3 {
+                    @include title-text(2rem);
+                    padding: 1rem 0;
+                }
+
+                a {
+                    @include graph-text(1.6rem);
+                    padding: 1rem 0;
+                    display: block; 
+
+                    i {
+                        color: $orange;
+                        padding-right: .5rem;
+                    }
+
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+
+                p {
+                    @include graph-text(1.8rem);
+                }
+
+                form {
+                    margin-top: 1rem;
+
+                    .email {
+                        width: 100%;
+                        padding: 1.2rem;
+                        font-size: 1.5rem;
+                        border: $border;
+                        border-radius: .2rem;
+                        margin: 1rem 0;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .credit {
+        @include title-text(2rem);
+        border-top: $border;
+        text-align: center;
+        padding-top: 3rem;
+        margin-top: 3rem;
+
+        span {
+
+            a {
+                color: $orange;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -458,6 +590,10 @@ section {
                 
                 &:nth-child(2) {
                     transform: scale(1);
+                }
+
+                &:hover {
+                    transform: scale(1.05);
                 }
             }
         }

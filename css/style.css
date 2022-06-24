@@ -421,6 +421,154 @@ section {
   color: #ff5421;
 }
 
+/* Blogs section styles */
+.blogs .container .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.blogs .container .box-container .box {
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+}
+
+.blogs .container .box-container .box:hover .image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blogs .container .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+}
+
+.blogs .container .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blogs .container .box-container .box .content {
+  padding: 2rem;
+}
+
+.blogs .container .box-container .box .content .link {
+  font-size: 2.7rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.blogs .container .box-container .box .content .link:hover {
+  color: #ff5421;
+}
+
+.blogs .container .box-container .box .content .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.blogs .container .box-container .box .content .icons span {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.blogs .container .box-container .box .content .icons span i {
+  color: #ff5421;
+  padding-right: .5rem;
+}
+
+/* footer section styles */
+.footer {
+  padding: 3rem 1rem;
+  background: url("../images/footer-bg.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.footer .container .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+.footer .container .box-container .box h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.footer .container .box-container .box a {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #ccc;
+  padding: 1rem 0;
+  display: block;
+}
+
+.footer .container .box-container .box a i {
+  color: #ff5421;
+  padding-right: .5rem;
+}
+
+.footer .container .box-container .box a:hover {
+  color: #ff5421;
+}
+
+.footer .container .box-container .box p {
+  font-size: 1.8rem;
+  line-height: 2;
+  color: #ccc;
+}
+
+.footer .container .box-container .box form {
+  margin-top: 1rem;
+}
+
+.footer .container .box-container .box form .email {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  border-radius: .2rem;
+  margin: 1rem 0;
+}
+
+.footer .credit {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #fff;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding-top: 3rem;
+  margin-top: 3rem;
+}
+
+.footer .credit span a {
+  color: #ff5421;
+}
+
+.footer .credit span a:hover {
+  color: #fff;
+}
+
 /* Media queries */
 @media (max-width: 991px) {
   html {
@@ -436,6 +584,10 @@ section {
   .pricing .box-container .box:nth-child(2) {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+  .pricing .box-container .box:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
   }
   .join-us .row h3 {
     font-size: 2.5rem;
